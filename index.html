@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Databases (Firebase)</title>
+  <style>
+    .container{
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h2>Recipes</h2>
+        <ul>
+        </ul>
+        <form>
+          <label for="recipe">Add a new recipe:</label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="recipe" required>
+            <div class="input-group-append">
+              <input type="submit" value="add" class="btn btn-outline-secondary">
+            </div>
+          </div>
+        </form>
+        <button>Stop UI Changes</button>
+      </div>
+    
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script>
+    // replace "xxxx" with your own generated firebase config
+         const firebaseConfig = {
+            apiKey: "AIzaSyBoR0x_LoTVZqblpXF4GrAi3YnMT-lQPFA",
+            authDomain: "recipes-a8f90.firebaseapp.com",
+            projectId: "recipes-a8f90",
+            storageBucket: "recipes-a8f90.appspot.com",
+            messagingSenderId: "798742907660",
+            appId: "1:798742907660:web:0954777332f6633e69d729",
+            measurementId: "G-B10YH729F5"
+         };
+ 
+         firebase.initializeApp(firebaseConfig);
+         const db = firebase.firestore();
+</script>
+<script src='app.js'></script>
+</body>
+</html>
